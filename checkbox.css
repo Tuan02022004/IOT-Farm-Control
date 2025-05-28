@@ -1,0 +1,138 @@
+/* Điều chỉnh khoảng cách của toggle trong các nhãn checkbox */
+.checkbox label .toggle, .checkbox-inline .toggle {
+    margin-left: -20px; /* Dịch toggle sang trái 20px */
+    margin-right: 5px; /* Dịch toggle sang phải 5px */
+}
+
+/* Định dạng chung cho toggle switch */
+.toggle {
+    position: relative; /* Vị trí tương đối so với phần tử cha */
+    overflow: hidden; /* Ẩn phần nội dung tràn ra ngoài */
+}
+
+/* Ẩn checkbox mặc định, chỉ hiển thị toggle */
+.toggle input[type=checkbox] {
+    display: none; /* Ẩn checkbox */
+}
+
+/* Nhóm chứa hai trạng thái ON và OFF của toggle */
+.toggle-group {
+    position: absolute; /* Vị trí tuyệt đối so với toggle */
+    width: 200%; /* Chiếm gấp đôi chiều rộng của toggle để chứa cả hai trạng thái */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: left .35s; /* Hiệu ứng chuyển động khi chuyển trạng thái */
+    -webkit-transition: left .35s; /* Hỗ trợ trình duyệt WebKit */
+    -moz-user-select: none; /* Ngăn chặn người dùng chọn text */
+    -webkit-user-select: none; /* Ngăn chặn chọn text trên trình duyệt WebKit */
+}
+
+/* Khi toggle ở trạng thái OFF, nhóm sẽ dịch sang trái 100% */
+.toggle.off .toggle-group {
+    left: -100%;
+}
+
+/* Nút "ON" của toggle */
+.toggle-on {
+    position: absolute; /* Vị trí tuyệt đối để căn chỉnh trong toggle */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 49.5%; /* Chia khoảng cách gần bằng một nửa */
+    margin: 0;
+    border: 0; /* Không viền */
+    border-radius: 0; /* Không bo góc */
+}
+
+/* Nút "OFF" của toggle */
+.toggle-off {
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 0;
+    bottom: 0;
+    left: 49%; /* Dịch sang trái một chút */
+    right: 0%;
+    margin: 0;
+    border: 0; /* Không viền */
+    border-radius: 0; /* Không bo góc */
+}
+
+/* Tay cầm trượt của toggle */
+.toggle-handle {
+    position: relative; /* Vị trí tương đối để di chuyển trong toggle */
+    margin: 0 auto; /* Căn giữa */
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%; /* Chiều cao bằng toggle */
+    width: 0; /* Ban đầu không có chiều rộng */
+    border-width: 0 1px; /* Viền mỏng ở hai bên */
+}
+
+/* Định dạng toggle button */
+.toggle.btn {
+    min-width: 59px; /* Chiều rộng tối thiểu */
+    min-height: 34px; /* Chiều cao tối thiểu */
+}
+
+/* Chỉnh khoảng cách nội dung trong toggle ở trạng thái ON */
+.toggle-on.btn {
+    padding-right: 24px;
+}
+
+/* Chỉnh khoảng cách nội dung trong toggle ở trạng thái OFF */
+.toggle-off.btn {
+    padding-left: 24px;
+}
+
+/* Toggle lớn */
+.toggle.btn-lg {
+    min-width: 79px; /* Chiều rộng tối thiểu */
+    min-height: 45px; /* Chiều cao tối thiểu */
+}
+
+/* Điều chỉnh khoảng cách trong toggle lớn ở trạng thái ON */
+.toggle-on.btn-lg {
+    padding-right: 31px;
+}
+
+/* Điều chỉnh khoảng cách trong toggle lớn ở trạng thái OFF */
+.toggle-off.btn-lg {
+    padding-left: 31px;
+}
+
+/* Định dạng tay cầm toggle lớn */
+.toggle-handle.btn-lg {
+    width: 40px;
+}
+
+/* Toggle nhỏ */
+.toggle.btn-sm {
+    min-width: 50px;
+    min-height: 30px;
+}
+
+/* Điều chỉnh khoảng cách trong toggle nhỏ ở trạng thái ON */
+.toggle-on.btn-sm {
+    padding-right: 20px;
+}
+
+/* Điều chỉnh khoảng cách trong toggle nhỏ ở trạng thái OFF */
+.toggle-off.btn-sm {
+    padding-left: 20px;
+}
+
+/* Toggle siêu nhỏ */
+.toggle.btn-xs {
+    min-width: 35px;
+    min-height: 22px;
+}
+
+/* Điều chỉnh khoảng cách trong toggle siêu nhỏ ở trạng thái ON */
+.toggle-on.btn-xs {
+    padding-right: 12px;
+}
+
+/* Điều chỉnh khoảng cách trong toggle siêu nhỏ ở trạng thái OFF */
+.toggle-off.btn-xs {
+    padding-left: 12px;
+}

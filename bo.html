@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FARM SMART</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>App Landing Page</title>
+  <link rel="stylesheet" href="switch.css" type="text/css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkbox.css">
+  <link rel="stylesheet" href="bootstrap-toggle.min_phongngu.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css">
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase.js"></script>
+  <script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyB90k1jk-bzkHYFHGh94LzLVAyBtn4l_AA",
+  authDomain: "smarthomeproject-d0f19.firebaseapp.com",
+  databaseURL: "https://smarthomeproject-d0f19-default-rtdb.firebaseio.com",
+  projectId: "smarthomeproject-d0f19",
+  storageBucket: "smarthomeproject-d0f19.firebasestorage.app",
+  messagingSenderId: "983172578197",
+  appId: "1:983172578197:web:909e8502eb0131736a149c"
+};
+  firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                  <img src="./img/farm111.png" alt="" class="header_logo-img">
+                </div>    
+                <div class="col-md-9 header_banner">          
+                <img src="./img/farmsmart1.png" alt="" class="mx-auto d-block header_banner-img">
+            </div>    
+        </div>
+      </div>
+    </div>
+
+    <div class="menungang">
+        <div class="container">
+            <div class="row">
+                <div class="menu">
+                    <!-- Nav tabs -->
+                  <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">MỤC LỤC</a>
+                        </div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                        <a class="nav-link " href="./ga.html">KHU VỰC NUÔI GÀ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  active "  data-toggle="tab" href="./bo.html">KHU VỰC NUÔI BÒ</a>
+                        </li>
+  
+                    </ul>
+                    
+              </div>
+             </nav>
+            <div class="tab-content">
+                     <div class="tab-pane container active" id="home"></div>
+                     <div class="tab-pane container fade" id="menu1"></div>
+                     <div class="tab-pane container fade" id="menu2"></div>
+                    </div>
+                </div>
+            </div>
+       </div>
+   </div>
+
+   <div class="container">
+    <div class="row"> 
+        <div class="col-md-3">
+            <div class="card">
+                <img id="quatId_01" class="card-img-top" src="./img/quat_off.jpg" alt="Card image" style="width:70%;margin-top:80px;margin-left:45px;">
+            <div class="card-body">
+                <div style="margin-left:30px;">
+                    <button class="button button2" id="batquat">ON</button>
+                    <button class="button button2" id="tatquat">OFF</button> 
+           </div>
+         </div>
+        </div>          
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+              <img id="canhbaoId_01" class="card-img-top" src="./img/light_bulb_off.png" alt="Card image" style="width:80%;margin-top:40px;margin-left:30px;">
+              <div class="card-body text-center">
+                <h5>ĐÈN A</h5>
+                <div id="state" style="margin-left:0px"></div>
+                <div id="info"></div>
+                <div style="margin-left:-40px;margin-top:10px;">
+                    <p><input id="toggle-trigger" type="checkbox" data-toggle="toggle" data-onstyle="outline-success" data-offstyle="outline-danger"></p>
+                </div>
+            </div> 
+              </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    
+                    <div id="myDIV"> 
+                        <img class="card-img-top" src="img/light_bulb.png" alt="Card image" style="height: 265px;"> 
+                    </div>
+                    <div class="control-container" style="margin-left:10px; text-align:center;">                  
+                        <input type="range" min="0" max="100" value="1" class="slider" id="sliderNgangId">
+                        <h5>ĐÈN B</h5>
+                        
+                    </div>  
+                    <p class="canhbao2" id="nhietdo">50</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    
+        <div class="col-md-3">
+            <div class="card">
+                <img id="nhietkeId" class="card-img-top" src="./img/doam3.jpg"  alt="Card image" style="width:105%;margin-top:40px;margin-left:0px;">
+                <div class="card-body text-center">
+                    <h5>Độ ẩm hiện tại:</h5>
+                    <p class="canhbao2" id="doam3">--</p>
+                </div>
+            </div> 
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card">
+                <img id="nhietkeId" class="card-img-top" src="./img/nhietdo1.png"  alt="Card image" style="width:105%;margin-top:40px;margin-left:0px;">
+                <div class="card-body text-center">
+                    <h5>Nhiệt độ hiện tại:</h5>
+                    <p class="canhbao2" id="nhietdo99">--°C</p>
+                </div>
+            </div> 
+        </div>
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5>Biểu đồ số bò theo từng tháng</h5>
+                    <canvas id="myChart" style="width:100%; max-width:1500px;"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="bo.js"></script>
+    </body>
+</html>
+
+ 

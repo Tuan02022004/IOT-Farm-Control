@@ -1,0 +1,128 @@
+/* Đặt màu nền cho toàn bộ trang web là màu trắng và sử dụng !important để đảm bảo không bị ghi đè */
+body {
+	background-color: white !important;
+}
+
+/* Thiết lập phần đầu trang với hiệu ứng chuyển màu từ #e6fff9 đến #e6fff9 */
+.header {
+	background-image: linear-gradient(0,#e6fff9, #e6fff9 ); /* Gradient màu nền */
+    height: 150px; /* Chiều cao phần header */
+	padding-top: 30px !important;  /* Khoảng cách trên trong header */
+	padding-bottom: 30px !important;  /* Khoảng cách dưới trong header */
+}
+
+/* Thiết lập kích thước logo trong header */
+.header_logo-img{
+    width: 150px; /* Chiều rộng logo */
+    margin-top: -25px; /* Đẩy logo lên trên */
+    margin-right: 50px; /* Dịch sang trái */
+}
+
+/* Căn giữa banner trong header */
+.header_banner {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+/* Thiết lập hình ảnh banner trong header */
+.header_banner-img {
+    width: 110%; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 125px; /* Đặt chiều cao cố định */
+    margin-top: -20px; /* Đẩy banner lên trên */
+    border-radius: 50px; /* Bo góc hình ảnh */
+}
+
+/* Thiết lập chung cho các đoạn văn bản (thẻ p) */
+p {
+    color:cornsilk; /* Màu chữ */
+    font-size: 30px; /* Kích thước chữ */
+    margin-top: 80px; /* Khoảng cách trên */
+    margin-bottom: 100px; /* Khoảng cách dưới */
+    margin-right: 160px; /* Dịch sang phải */
+    margin-left: 120px; /* Dịch sang trái */
+}
+
+/* Thiết lập riêng cho cảnh báo (thẻ p có class "canhbao") */
+p.canhbao {
+    color:crimson; /* Màu chữ đỏ */
+    font-size: 20px; /* Kích thước chữ */
+    margin-top: -5px; /* Đẩy lên trên */
+    margin-right: 0px; /* Không dịch sang phải */
+    margin-left: 50px; /* Dịch sang trái */
+}
+
+/* Cảnh báo căn giữa */
+p.canhbao2 {
+    color: crimson; /* Màu chữ đỏ */
+    font-size: 20px; /* Kích thước chữ */
+    text-align: center; /* Căn giữa nội dung */
+    margin: 0 auto; /* Căn giữa khối chứa */
+    display: block; /* Đảm bảo là block element */
+}
+
+/* Thiết lập văn bản cho cảm biến (thẻ p có class "cambien") */
+p.cambien {
+    color:black; /* Màu chữ đen */
+    font-size: 20px; /* Kích thước chữ */
+    margin-top: -10px; /* Đẩy lên trên */
+    margin-bottom: -10px; /* Đẩy lên trên nhiều hơn */
+    margin-right: 0px; /* Không dịch sang phải */
+    margin-left: 210px; /* Dịch sang trái */
+}
+
+/* Thiết lập chung cho các nút bấm */
+.button {
+    border: none; /* Bỏ viền nút */
+    color: white; /* Màu chữ trắng */
+    padding: 7px 15px; /* Kích thước lề bên trong nút */
+    text-align: center; /* Căn giữa nội dung trong nút */
+    text-decoration: none; /* Bỏ gạch chân */
+	display: inline-block; /* Hiển thị dạng block-inline */
+	font-size: 18px; /* Kích thước chữ */
+	margin: 10px 10px; /* Khoảng cách giữa các nút */
+    cursor: pointer; /* Đổi con trỏ chuột thành bàn tay khi rê vào */
+}
+
+/* Nút bấm màu xanh lá */
+.button1 { 
+    background-color: #0ee957; /* Màu xanh lá */
+    margin-top: 13px; /* Đẩy xuống một chút */
+    margin-left: auto; /* Căn giữa theo chiều ngang */
+    margin-right: auto; /* Căn giữa theo chiều ngang */
+    display: block; /* Hiển thị dạng block */
+}
+
+/* Nút bấm màu xanh lá (tương tự button1) */
+.button2 { 
+    background-color: #0ee957; /* Màu xanh lá */
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Nút bấm màu xanh dương */
+.button3 {
+    background-color: #008CBA; /* Màu xanh dương */
+    margin-top: 13px; /* Đẩy xuống một chút */
+    margin-left: 30px; /* Dịch sang phải */
+}
+
+/* Nút bấm màu xanh lá (tương tự button1, button2) */
+.button5 {
+    background-color: #0ee957; /* Màu xanh lá */
+    margin-top: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Thiết lập cho phần menu, đẩy sang phải */
+div.menu {
+    margin-left: 200px; /* Dịch menu sang phải */
+}
+
+/* Thiết lập thanh menu ngang */
+div.menungang {
+    background-color:cyan; /* Đặt màu nền xanh cyan */
+	margin-top:-31px; /* Đẩy lên trên */
+}
